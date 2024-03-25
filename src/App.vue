@@ -20,7 +20,7 @@ export default {
       // console.log(this.store);
       axios.get(this.store.apiUrl, {
         params:{
-          num: 10,
+          num: 20,
           offset: 0,
           language:'it'
         }
