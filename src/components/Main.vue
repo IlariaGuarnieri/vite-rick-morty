@@ -11,7 +11,8 @@ export default {
 
 <template>
   <div class="text-center my-5">
-    <button @click="store.counter++" class="btn btn-primary"> incrementa contatore</button>
+    <button @click="store.counter++" class="btn btn-primary mb-5"> incrementa contatore</button>
+    <input class="form-control" type="text" v-model="store.mainTitle">
   </div>
 </template>
 
