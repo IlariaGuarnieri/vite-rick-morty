@@ -16,15 +16,16 @@ export default {
   },
   methods: {
     getApi(){
-      console.log('GET API');
-      console.log(this.store);
+      // console.log('GET API');
+      // console.log(this.store);
       axios.get(this.store.apiUrl, {
         params:{
           num: 10,
           offset: 0,
           language:'it'
         }
-      }).then(result=>{
+      })
+      .then(result=>{
         this.store.cardsList = result.data.results;
         console.log(this.store.cardsList);
       })
