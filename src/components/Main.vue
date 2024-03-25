@@ -22,7 +22,7 @@ export default {
       :name="card.name"
       :status="card.status"
       :species="card.species"
-      :image="card.results_image "
+      :image="card.image "
       />
     </div>
   </div>
