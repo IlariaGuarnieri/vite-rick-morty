@@ -18,6 +18,10 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+
+h1{
+  color:rgb(43, 1, 43);
+}
 input{
   width: 300px;
 }

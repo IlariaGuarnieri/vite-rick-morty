@@ -30,4 +30,12 @@ export default {
   overflow: hidden;
   border-radius: 50%;
 }
+.photo:hover{
+  width: 210px;
+  height:210px;
+  box-shadow: 4px 4px 4px  #7d6b6b;
+}
+h5, h6 ,p{
+  color:rgb(43, 1, 43);
+}
 </style>

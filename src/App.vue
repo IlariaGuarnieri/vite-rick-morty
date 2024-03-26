@@ -46,6 +46,9 @@ export default {
   <Main />
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 @use '../src/assets/scss/main.scss';
+body{
+  background-color:rgb(225, 129, 225);
+}
 </style>
