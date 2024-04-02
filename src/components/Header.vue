@@ -5,8 +5,9 @@ export default {
   data() {
     return {
       store
-    }
+    };
   },
+  
   // mounted(){
   //   axios.get('https://rickandmortyapi.com/api/character')
   //   .then(res => {
@@ -23,26 +24,27 @@ export default {
 </script>
 
 <template>
-  <div class="text-center my-5">
+  <div class="container text-center my-5">
   <h1>{{store.mainTitle}}</h1>
+    <label for="exampleDataList" class="form-label">Ricerca per nome</label>
+    <input class="form-control" list="datalistOptions" id="exampleDataList" v-model="searchTerm" placeholder="Cerca per nome">
+    <datalist id="datalistOptions">
+      <!-- <option value="Chicago"></option>
+      <option value="Denver"></option>
+      <option value="New York"></option>
+      <option value="San Francisco"></option>
+      <option value="Boston"></option> -->
+      <option
+      v-for="(name, index) in this.store.nameList" 
+      :key="index"
+      :value="name"
+      > </option>
+      
+    </datalist>
   </div>
-  <div class="input-drop">
-    <input type="text" placeholder="Search Characters">
-    <!-- dropdown -->
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        status
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-      </div>
-  </div>
-</div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss" scoped >
 @use '../../src/assets/scss/partials/variables';
 @use '../assets/scss/main.scss';
 
@@ -61,8 +63,4 @@ export default {
     margin-left: 20px;
   }
 }
-
-
-
-
 </style>

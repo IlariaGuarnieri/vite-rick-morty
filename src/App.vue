@@ -4,12 +4,15 @@ import { store } from './data/store'
 import Header from './components/Header.vue'
 import Main from './components/Main.vue'
 import Paginator from './components/partials/Paginator.vue';
+import Searchbar from './components/partials/Searchbar.vue';
 
 export default {
   components:{
     Header,
     Main,
-    Paginator
+    Paginator,
+    Searchbar
+    
   },
   data() {
     return {
@@ -18,6 +21,7 @@ export default {
   },
   methods: {
     getApi(){
+      this.store.cardsList = [];
       // console.log('GET API');
       // console.log(this.store);
       //apiurl lo trovo su store.js
@@ -37,10 +41,20 @@ export default {
       .catch(error=>{
         console.log(error);
       })
+    },
+    getAllName(){
+      axios.get(this.store.nameUrl)
+      .then(res => {
+        console.log(res.data);
+        this.store.nameList = res.data.map (item => item.name);
+        console.log(this.store.nameList);
+      })
     }
   },
   mounted() {
-    this.getApi()
+    this.getApi(),
+    this.getAllName()
+
   //   axios.get('https://rickandmortyapi.com/api/character')
   //   .then(res => {
   //     res.data.result.forEach(item => {
@@ -57,9 +71,10 @@ export default {
 </script>
 
 <template>
+  <Searchbar/>
   <Header />
   <Main />
-  <Paginator />
+  <Paginator @prossimaPagina="getApi" />
 </template>
 
 <style lang="scss" >

@@ -2,7 +2,7 @@
   <span class="loader"></span>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .loader {
   width: 48px;
   height: 48px;

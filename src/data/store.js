@@ -4,7 +4,9 @@ export const store = reactive ({
   // qui ci metto le info globali (per ors)
   mainTitle: '- Rick & Morty -',
   apiUrl: 'https://rickandmortyapi.com/api/character',
+  nameUrl : 'https://rickandmortyapi.com/api/character/?name',
   cardsList: [],
+  nameList: [],
   pageInfo:{
     counter :0,
     itemsPerPage: 20,

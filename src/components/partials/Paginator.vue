@@ -11,6 +11,7 @@ export default {
       store.pageInfo.counter++;
       store.queryParams.offset = store.pageInfo.itemsPerPage * store.pageInfo.counter;
       console.log(store.queryParams);
+      this.$emit('prossimaPagina')
     },
     prevPage(){
       store.pageInfo.counter --;
@@ -27,6 +28,6 @@ export default {
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 
 </style>
