@@ -14,8 +14,7 @@ export default {
     <div class="mt-3">
       <img :src="image" class="photo card-img-top" :alt="name">
       <div class="card-body">
-        <h5 class="card-title">{{ name }}</h5>
-        <h5 class="card-title">----</h5>
+        <h5 class="card-title mt-3">{{ name }}</h5>
         <h6 class="card-title">{{ status }}</h6>
         <p class="text-center">{{ species }}</p>
       </div>
@@ -35,7 +34,8 @@ export default {
   height:210px;
   box-shadow: 4px 4px 4px  #7d6b6b;
 }
+
 h5, h6 ,p{
-  color:rgb(43, 1, 43);
+  color:rgb(71, 5, 71);
 }
 </style>
