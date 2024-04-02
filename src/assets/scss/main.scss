@@ -1,5 +1,8 @@
 // @import 'bootstrap/scss/bootstrap';
+@use './partials/variables' as *;
 
 @import '../scss/partials/general';
 @import '../scss/partials/typography';
 @import '../scss/partials/utils';
+// @import '@fontsource/montserrat';
+// @import '@fontsource/montserrat/700.scss';

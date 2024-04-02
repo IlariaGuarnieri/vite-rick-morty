@@ -23,6 +23,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@import '../../../src/assets/scss/partials/variables';
 .photo{
   width: 220px;
   height: 220px;
@@ -36,6 +37,6 @@ export default {
 }
 
 h5, h6 ,p{
-  color:rgb(71, 5, 71);
+  color: $primary-color;
 }
 </style>

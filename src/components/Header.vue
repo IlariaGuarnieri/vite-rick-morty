@@ -18,9 +18,9 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-
+@import '../../src/assets/scss/partials/variables';
 h1{
-  color:rgb(43, 1, 43);
+  color: $primary-color;
 }
 input{
   width: 300px;

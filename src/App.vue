@@ -48,7 +48,14 @@ export default {
 
 <style lang="scss" >
 @use '../src/assets/scss/main.scss';
+@import '../src/assets/scss/partials/variables';
 body{
   background-color:rgb(225, 129, 225);
+  color: $primary-color;
+  min-height: 100vh;
+  // background-image: linear-gradient(
+  //   lighten (rgb(71, 5, 71), 80%),
+  //   lighten (rgb(71, 5, 71), 60%)
+  // );
 }
 </style>
