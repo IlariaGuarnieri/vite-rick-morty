@@ -28,7 +28,7 @@ export default {
       axios.get(this.store.apiUrl, {
         // params:{
         //   num: 20, 
-        //   offset: 0,   questi params li ho tolti da qui per metterli su store.js sotto il nome di queryParams DATO CHE SARANNO DATI CHE CAMBIANO
+        //   offset: 0,   questi params li ho tolti da qui per metterli su store.js sotto il nome di queryParams DATO CHE SARANNO DATI CHE CAMBIANO!!!
         // } 
         params: store.queryParams
       })
