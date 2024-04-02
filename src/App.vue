@@ -3,11 +3,13 @@ import axios from 'axios';
 import { store } from './data/store'
 import Header from './components/Header.vue'
 import Main from './components/Main.vue'
+import Paginator from './components/partials/Paginator.vue';
 
 export default {
   components:{
     Header,
     Main,
+    Paginator
   },
   data() {
     return {
@@ -18,15 +20,18 @@ export default {
     getApi(){
       // console.log('GET API');
       // console.log(this.store);
+      //apiurl lo trovo su store.js
       axios.get(this.store.apiUrl, {
-        params:{
-          num: 20,
-          offset: 0,
-          language:'it'
-        }
+        // params:{
+        //   num: 20, 
+        //   offset: 0,   questi params li ho tolti da qui per metterli su store.js sotto il nome di queryParams DATO CHE SARANNO DATI CHE CAMBIANO
+        // } 
+        params: store.queryParams
       })
       .then(result=>{
         this.store.cardsList = result.data.results;
+        this.store.pageInfo.pages = result.data.info.pages
+        console.log(store.pageInfo.pages);
         console.log(this.store.cardsList);
       })
       .catch(error=>{
@@ -36,6 +41,16 @@ export default {
   },
   mounted() {
     this.getApi()
+  //   axios.get('https://rickandmortyapi.com/api/character')
+  //   .then(res => {
+  //     res.data.result.forEach(item => {
+  //       console.log(item.species);
+  //       if(!store.status.includes(item.status)){
+  //         store.status.push(item.status)
+  //       }
+  //     })
+  //     console.log(store.status);
+  //   })
   }
 }
 
@@ -44,6 +59,7 @@ export default {
 <template>
   <Header />
   <Main />
+  <Paginator />
 </template>
 
 <style lang="scss" >

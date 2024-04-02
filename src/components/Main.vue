@@ -1,9 +1,11 @@
 <script>
 import Card from './partials/Card.vue';
+import Loader from './partials/Loader.vue';
 import {store} from '../data/store'
 export default {
   components:{
-    Card
+    Card,
+    Loader
   },
   data() {
     return {
@@ -15,7 +17,8 @@ export default {
 
 <template>
   <div class="text-center my-5 container">
-    <div class="row row-cols-4">
+    <Loader v-if=" this.store.cardsList.lenght === 0 " />
+    <div v-else class="row row-cols-4">
       <Card 
       v-for=" card in this.store.cardsList" 
       :key="card.id" 
