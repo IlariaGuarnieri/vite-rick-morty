@@ -4,14 +4,14 @@ import { store } from './data/store'
 import Header from './components/Header.vue'
 import Main from './components/Main.vue'
 import Paginator from './components/partials/Paginator.vue';
-import Searchbar from './components/partials/Searchbar.vue';
+// import Searchbar from '/components/partials/Searchbar.vue';
 
 export default {
   components:{
     Header,
     Main,
     Paginator,
-    Searchbar
+    // Searchbar
     
   },
   data() {
