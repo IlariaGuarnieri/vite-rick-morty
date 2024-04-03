@@ -39,4 +39,14 @@ export default {
 h5, h6 ,p{
   color: $primary-color;
 }
+h5{
+  text-transform: capitalize;
+  &::after{
+    content: '';
+    display:block;
+    border-bottom: 1px solid $primary-color;
+    width: 40px;
+    margin: 1rem auto;
+  }
+}
 </style>
